@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Add_certificate">
+    tools:context=".Edit_certificate_infomation">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -28,9 +28,10 @@
                     android:layout_centerVertical="true"
                     android:background="@drawable/baseline_arrow_back_24"/>
                 <TextView
+                    android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Add certificate"
+                    android:text="Banhmiruoc"
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="20dp"
                     android:background="@color/white"
@@ -48,8 +49,8 @@
                 android:layout_marginBottom="10dp">
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_image"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
                     android:src="@drawable/user"
                     app:civ_border_color="@color/brown"
                     app:civ_border_width="2dp"
@@ -57,12 +58,12 @@
                     android:layout_marginTop="40dp" />
                 <Button
                     android:id="@+id/btnCapture"
-                    android:layout_width="25dp"
-                    android:layout_height="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
                     android:background="@drawable/baseline_camera_alt_24"
                     android:layout_alignBottom="@id/profile_image"
                     android:layout_alignEnd="@id/profile_image"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="25dp"/>
             </RelativeLayout>
 
@@ -81,21 +82,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="Name"
+                    android:text="Certificate Name"
                     android:fontFamily="@font/itim"
                     android:textSize="22sp"
                     android:textColor="@color/brown"/>
             </LinearLayout>
             <EditText
-                android:id="@+id/et_name"
+                android:id="@+id/et_cername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter student name"
+                android:hint="Banhmiruoc"
                 android:background="@null"
                 android:layout_marginLeft="75dp"
                 android:textColorHint="@color/brown"
                 android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
+                android:textSize="20sp"/>
             <View
                 android:layout_width="300dp"
                 android:layout_height="1dp"
@@ -116,21 +117,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="Birthday"
+                    android:text="Session"
                     android:fontFamily="@font/itim"
                     android:textSize="22sp"
                     android:textColor="@color/brown"/>
             </LinearLayout>
             <EditText
-                android:id="@+id/et_birthday"
+                android:id="@+id/et_session"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter birthday"
+                android:hint="18/02/2004"
                 android:background="@null"
                 android:layout_marginLeft="75dp"
                 android:textColorHint="@color/brown"
                 android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
+                android:textSize="20sp"/>
             <View
                 android:layout_width="300dp"
                 android:layout_height="1dp"
@@ -151,126 +152,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="Email"
+                    android:text="Organization"
                     android:fontFamily="@font/itim"
                     android:textSize="22sp"
                     android:textColor="@color/brown"/>
             </LinearLayout>
             <EditText
-                android:id="@+id/et_email"
+                android:id="@+id/et_organization"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter email"
+                android:hint="Banhmiruoc@gmail.com"
                 android:background="@null"
                 android:layout_marginLeft="75dp"
                 android:textColorHint="@color/brown"
                 android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
-            <View
-                android:layout_width="300dp"
-                android:layout_height="1dp"
-                android:background="@color/brown"
-                android:layout_marginLeft="75dp" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/baseline_phone_24"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Phone"
-                    android:fontFamily="@font/itim"
-                    android:textSize="22sp"
-                    android:textColor="@color/brown"/>
-            </LinearLayout>
-            <EditText
-                android:id="@+id/et_phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter phone number"
-                android:background="@null"
-                android:layout_marginLeft="75dp"
-                android:textColorHint="@color/brown"
-                android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
-            <View
-                android:layout_width="300dp"
-                android:layout_height="1dp"
-                android:background="@color/brown"
-                android:layout_marginLeft="75dp" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/baseline_center_focus_weak_24"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Student ID"
-                    android:fontFamily="@font/itim"
-                    android:textSize="22sp"
-                    android:textColor="@color/brown"/>
-            </LinearLayout>
-            <EditText
-                android:id="@+id/et_status"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter student ID"
-                android:background="@null"
-                android:layout_marginLeft="75dp"
-                android:textColorHint="@color/brown"
-                android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
-            <View
-                android:layout_width="300dp"
-                android:layout_height="1dp"
-                android:background="@color/brown"
-                android:layout_marginLeft="75dp" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/baseline_class_24"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Class"
-                    android:fontFamily="@font/itim"
-                    android:textSize="22sp"
-                    android:textColor="@color/brown"/>
-            </LinearLayout>
-            <EditText
-                android:id="@+id/et_role"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter class"
-                android:background="@null"
-                android:layout_marginLeft="75dp"
-                android:textColorHint="@color/brown"
-                android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
+                android:textSize="20sp"/>
             <View
                 android:layout_width="300dp"
                 android:layout_height="1dp"
@@ -291,38 +187,74 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="Faculty"
+                    android:text="School"
                     android:fontFamily="@font/itim"
                     android:textSize="22sp"
                     android:textColor="@color/brown"/>
             </LinearLayout>
             <EditText
-                android:id="@+id/et_faculty"
+                android:id="@+id/et_school"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter faculty"
+                android:hint="0123456789"
                 android:background="@null"
                 android:layout_marginLeft="75dp"
                 android:textColorHint="@color/brown"
                 android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
+                android:textSize="20sp"/>
             <View
                 android:layout_width="300dp"
                 android:layout_height="1dp"
                 android:background="@color/brown"
                 android:layout_marginLeft="75dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/baseline_class_24"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Description"
+                    android:fontFamily="@font/itim"
+                    android:textSize="22sp"
+                    android:textColor="@color/brown"/>
+            </LinearLayout>
+            <EditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="22050201"
+                android:background="@null"
+                android:layout_marginLeft="75dp"
+                android:textColorHint="@color/brown"
+                android:fontFamily="@font/itim"
+                android:textSize="20sp"/>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:background="@color/brown"
+                android:layout_marginLeft="75dp" />
+
             <Button
-                android:id="@+id/btnAddStu"
+                android:id="@+id/btnSave"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Create student"
+                android:text="Save"
                 android:fontFamily="@font/itim"
                 android:textSize="25sp"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:background="@drawable/rounded_button1"
+                android:textColor="@color/brown"
+                android:background="@drawable/rounded_button"
                 android:layout_marginBottom="20dp"/>
         </LinearLayout>
     </ScrollView>

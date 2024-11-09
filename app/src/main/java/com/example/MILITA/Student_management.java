@@ -20,7 +20,7 @@ public class Student_management extends AppCompatActivity {
     private RecyclerView recyclerView;
     private StudentAdapter adapter;
     private List<Student> studentList;
-    Button btnFilter, btnAddStu;
+    Button btnFilter, btnAddStu, btnDelStu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ public class Student_management extends AppCompatActivity {
         });
         btnFilter = findViewById(R.id.btnFilter);
         btnAddStu = findViewById(R.id.btnAddStu);
+        btnDelStu = findViewById(R.id.btnDelStu);
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -61,6 +62,15 @@ public class Student_management extends AppCompatActivity {
             public void onClick(View view) {
                 if(view.getId() == R.id.btnAddStu) {
                     Intent intent = new Intent(Student_management.this, Add_student.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        btnDelStu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view.getId() == R.id.btnDelStu) {
+                    Intent intent = new Intent(Student_management.this, Certificate_management.class);
                     startActivity(intent);
                 }
             }

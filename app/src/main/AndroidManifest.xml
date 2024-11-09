@@ -17,6 +17,15 @@
         android:theme="@style/Theme.MILITA"
         tools:targetApi="31">
         <activity
+            android:name=".Edit_certificate_infomation"
+            android:exported="false" />
+        <activity
+            android:name=".Certificate_infomation"
+            android:exported="false" />
+        <activity
+            android:name=".Certificate_management"
+            android:exported="false" />
+        <activity
             android:name=".Add_certificate"
             android:exported="false" />
         <activity
