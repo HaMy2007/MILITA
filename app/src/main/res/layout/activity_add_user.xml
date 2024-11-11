@@ -226,26 +226,41 @@
                     android:textSize="22sp"
                     android:textColor="@color/brown"/>
             </LinearLayout>
-            <EditText
-                android:id="@+id/et_status"
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Choose status"
-                android:background="@null"
-                android:layout_marginLeft="75dp"
-                android:textColorHint="@color/brown"
-                android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
-            <View
-                android:layout_width="300dp"
-                android:layout_height="1dp"
-                android:background="@color/brown"
-                android:layout_marginLeft="75dp" />
+                android:layout_marginHorizontal="75dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:paddingStart="8dp"
+                    android:button="@drawable/custom_radio_button"
+                    android:textColor="@color/brown"
+                    android:fontFamily="@font/itim"
+                    android:textSize="18sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Locked"
+                    android:paddingStart="8dp"
+                    android:button="@drawable/custom_radio_button"
+                    android:textColor="@color/brown"
+                    android:fontFamily="@font/itim"
+                    android:textSize="18sp"/>
+            </RadioGroup>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
                 <ImageView
@@ -261,21 +276,13 @@
                     android:textSize="22sp"
                     android:textColor="@color/brown"/>
             </LinearLayout>
-            <EditText
-                android:id="@+id/et_role"
-                android:layout_width="match_parent"
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_marginLeft="70dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Choose role"
-                android:background="@null"
-                android:layout_marginLeft="75dp"
-                android:textColorHint="@color/brown"
-                android:fontFamily="@font/itim"
-                android:textSize="17sp"/>
-            <View
-                android:layout_width="300dp"
-                android:layout_height="1dp"
-                android:background="@color/brown"
-                android:layout_marginLeft="75dp" />
+                android:entries="@array/options_array" />
             <Button
                 android:id="@+id/btnAddUser"
                 android:layout_width="300dp"
